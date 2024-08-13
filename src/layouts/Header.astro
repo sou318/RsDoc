@@ -1,0 +1,37 @@
+<main>
+    <a href="/">
+        <img src="favicon.png">
+        <h1>RsDoc</h1>
+    </a>
+</main>
+
+<style lang="scss">
+    :root {
+        --header-size: 45px
+    }
+
+    main {
+        background-color: #f44;
+        display: flex;
+        flex-direction: column;
+        height: var(--header-size);
+        font-size: 0;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            height: 100%;
+            image-rendering: pixelated;
+        }
+
+        h1 {
+            vertical-align: top;
+            display: inline-block;
+            font-size: var(--header-size);
+            margin: 0;
+        }
+    }
+</style>
