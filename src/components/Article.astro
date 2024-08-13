@@ -1,0 +1,28 @@
+<div class="centerText">
+    <div class="leftText">
+        <slot/>
+    </div>
+</div>
+
+<style>
+    :root {
+        --side_border: thin solid #ddd;
+        --padding: 1rem;
+    }
+
+    .centerText {
+        flex-grow: 1;
+        text-align: center;
+    }
+    .leftText {
+        height: calc(100% - var(--padding) * 2);
+        border-left: var(--side_border);
+        border-right: var(--side_border);
+        font-size: 1.1rem;
+        padding: var(--padding);
+        margin-right: var(--margin-right);
+        width: 50vw;
+        display: inline-block;
+        text-align: left;
+    }
+</style>
