@@ -4,7 +4,7 @@
     </div>
 </div>
 
-<style>
+<style lang="scss">
     :root {
         --side_border: thin solid #ddd;
         --padding: 1rem;
@@ -24,5 +24,10 @@
         width: 50vw;
         display: inline-block;
         text-align: left;
+
+        @media screen and (max-aspect-ratio: 1/1) {
+            display: block;
+            width: auto;
+        }
     }
 </style>
