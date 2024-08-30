@@ -20,9 +20,8 @@ const { title } = Astro.props;
 		<title>{title} - RsDoc</title>
 	</head>
 	<body>
-		<Header/>
+		<Header title={title}/>
 		<Article>
-			<h1 id="title">{title}</h1>
 			<slot/>
 		</Article>
 	</body>
@@ -37,13 +36,6 @@ const { title } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
-	}
-
-	#title {
-		font-weight: normal;
-		font-size: 4rem;
-		line-height: 4rem;
-		border-bottom: thin solid black;
 	}
 </style>
 

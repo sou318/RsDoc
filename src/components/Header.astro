@@ -1,16 +1,31 @@
-<main>
-    <a href="/">
+---
+import astroConfig from '../../astro.config.mjs';
+
+
+interface Props {
+    title?: string;
+}
+
+let title = Astro.props.title ?? "";
+if (!!title) title = " - " + title;
+---
+
+<div class="main">
+    <a href={astroConfig.base}>
         <img src="/RsDoc/favicon.png">
-        <h1>RsDoc</h1>
+        <h1>
+            <span>RsDoc</span>
+            <span>{title}</span>
+        </h1>
     </a>
-</main>
+</div>
 
 <style lang="scss">
     :root {
         --height: 5vh;
     }
 
-    main {
+    .main {
         user-select: none;
         background-color: #f44;
         display: flex;
