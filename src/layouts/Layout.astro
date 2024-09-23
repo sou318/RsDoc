@@ -3,7 +3,7 @@ import Header from "../components/Header.astro";
 import Article from "../components/Article.astro";
 
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -11,36 +11,36 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="ja">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="Redstone circuits document">
-		<meta name="generator" content={Astro.generator}>
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<link rel="icon" type="image/png" href="RsDoc/favicon.png">
-		<title>{title} - RsDoc</title>
-	</head>
-	<body>
-		<Header title={title}/>
-		<Article>
-			<slot/>
-		</Article>
-	</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Redstone circuits document">
+        <meta name="generator" content={Astro.generator}>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="icon" type="image/png" href="RsDoc/favicon.png">
+        <title>{title} - RsDoc</title>
+    </head>
+    <body>
+        <Header title={title}/>
+        <Article>
+            <slot/>
+        </Article>
+    </body>
 </html>
 
 <style lang="scss">
-	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
-	body {
-		margin: 0;
-		font-family: "Noto Sans JP", sans-serif;
-		display: flex;
-		flex-direction: column;
-		height: 100vh;
-	}
+    body {
+        margin: 0;
+        font-family: "Noto Sans JP", sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
 </style>
 
 <style is:global>
-	h1, h2, h3, h4, h5, h6 {
-		margin: 0;
-	}
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
 </style>
